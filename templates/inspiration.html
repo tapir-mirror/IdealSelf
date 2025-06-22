@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Who are your personal heros?</title>
+</head>
+<body>
+
+<form method="POST" action="{{ url_for('get_references') }}">
+
+  <p> Username <input type = "text" name = "username" /></p></br>
+  <p> Email <input type = "email" name = "email" placeholder="Enter email" value=" {{ email if email}}" /></p></br>
+  <p> Password <input type = "password" name = "password" /></p></br>
+
+  <label>Historical References (Format: Name:Trait, e.g. Cicero:Empowerment)</label><br>
+  <textarea name="historical_references"></textarea><br><br>
+
+  <label>Fictional References (e.g. Sherlock Holmes:Analytical Thinking)</label><br>
+  <textarea name="fictional_references"></textarea><br><br>
+
+  <label>Contemporary References (e.g. Queen Rania:Eloquence)</label><br>
+  <textarea name="contemporary_references"></textarea><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirror</title>
+</head>
+<body>
+<div>
+{% if user %}
+    <h1 id="greeting">Welcome {{ user.username }}</h1>
+{% endif %}
+</div>
+
+<form action="{{ url_for('stylized_response') }}" method="get">
+  <button type="submit">Get Inspired</button>
+</form>
+
+
+
+</body>
+</html>
